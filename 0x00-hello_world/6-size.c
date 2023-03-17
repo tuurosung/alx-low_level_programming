@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/**
+ * main - print the size of data types
+ *
+ * Description: the program should produce the output
+ * of the size of the data types passed to it
+ * in variables declared with data types
+ * Return:0
+ */
+int main(void)
+{
+	char c;
+	int i;
+	long li;
+	long long lli;
+	float f;
+
+	printf("Size of a char: %ld byte(s)\n", sizeof(f));
+	printf("Size of an int: %ld byte(s)\n", sizeof(i));
+	printf("Size of a long int: %ld byte(s)\n", sizeof(li));
+	printf("Size of a long long int: %ld byte(s))\n", sizeof(lli));
+	printf("Size of a float: %ld byte(s))\n", sizeof(f));
+	return (0);
+}
+
