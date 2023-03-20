@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- * main: print all possible different combinations of two digits
+ * main - print all possible different combinations of two digits
  *
+ * Description: When called, program will return all possible
+ * combinations of two digits without repeat
  * Return: 0
  *
  */
@@ -20,7 +22,7 @@ int main(void)
 
 			if (i == 8 && j == 9)
 				continue;
-			
+
 			putchar(',');
 			putchar(' ');
 		}
