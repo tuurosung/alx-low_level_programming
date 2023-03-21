@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - Program prints alphabets in lower case 10x
+ * print_alphabet_x10 - Program prints alphabets in lower case 10x
  *
  * Description: when called, the main function returns
  * all lowercase alphabets tentimes followed by a new line
@@ -19,7 +19,6 @@ void print_alphabet_x10(void)
 		{
 			_putchar(c);
 		}
-	
 
 	_putchar('\n');
 	}
