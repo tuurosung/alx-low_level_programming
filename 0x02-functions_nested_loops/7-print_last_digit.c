@@ -13,7 +13,7 @@ int print_last_digit(int n)
 {
 	/* get the last number using mod */
 
-	last_digit = n % 10;
+	int last_digit = n % 10;
 
 	if (last_digit < 0)
 		last_digit = -1 * last_digit;
