@@ -3,17 +3,13 @@
 /**
  * print_numbers - print numbers from 0 to 9
  *
- * @c: character to be iterated
- *
  */
 void print_numbers(void)
 {
-	char c;
+	int num;
 
-	while (c <= '9')
-	{
-		_putchar(c);
-		c++;
-	}
+	for (num = 0; num <= 9; num++)
+		_putchar((num % 10) + '0');
+
 	_putchar('\n');
 }
