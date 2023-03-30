@@ -9,11 +9,11 @@
  * Return: A pointer to the destination string
  */
 char *_strcat(char *dest, char *src)
-{	
+{
 	/* initialize  counters */
 	int index = 0;
 	int d_len = 0;
-	
+
 	/* get the strlen of dest */
 	while (dest[index++])
 		d_len++;
