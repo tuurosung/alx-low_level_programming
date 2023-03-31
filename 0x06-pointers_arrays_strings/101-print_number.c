@@ -19,7 +19,7 @@ void print_number(int n)
 
 	/* if the number isn't divisible by 10 */
 	if ((number / 10) > 0)
-		print_number(number / 10)
+		print_number(number / 10);
 
-	_putchar((num % 10) + '0');
+	_putchar((number % 10) + '0');
 }
