@@ -8,7 +8,7 @@
  * @haystack: given string to be seached for @needle
  * @needle: substring whose first occurrence is to be found
  *
- * Return: a pointer to the begginning of the located substring, or NULL if 
+ * Return: a pointer to the begginning of the located substring, or NULL if
  * not found
  *
  */
