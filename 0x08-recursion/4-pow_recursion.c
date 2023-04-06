@@ -18,12 +18,17 @@ int _pow_recursion(int x, int y)
 
 	/* return -1 if y less than 0 */
 	if (y < 0)
+	{
 		return (-1);
-
+	}
 	else if (y == 0)
+	{
 		return (1);
-
-	/* recursively call the function itself */
-	ans *= _pow_recursion(x, y - 1);
-
-	return (ans);
+	}
+	else
+	{
+		/* recursively call the function itself */
+		ans *= _pow_recursion(x, y - 1);
+		return (ans);
+	}
+}
