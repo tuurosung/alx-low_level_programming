@@ -1,29 +1,23 @@
 #include "main.h"
 
-/**
- * _sqrt_recursion - function that returns the natural square root of a number
- *
- * @n: number whose square root is to be determined
- *
- * Return: the natural square root of n, or -1 if otherwise
- */
+
 
 
 /**
- * getSqRt - functions to mathematically determine the square root
+ * get_sqrt - functions to mathematically determine the square root
  *
- * @val: whose root if to be found;
+ * @val: whose root is to be found;
  *
- * @rt: root variable from _sqrt_recursive function 
+ * @rt: root variable from _sqrt_recursive function
  *
- * Return: the natural square root or -1 if otherwise
+ * Return: the natural square root or -2 if otherwise
  */
 
-int getSqRt(int val, int rt)
+int get_sqrt(int val, int rt)
 {
 	/* check for perfect squares */
 	if ((rt * rt) == val)
-		return rt;
+		return (rt);
 
 	if (rt == val / 2)
 		return (-1);
@@ -32,6 +26,12 @@ int getSqRt(int val, int rt)
 }
 
 
+/**
+ * _sqrt_recursion - function that returns the natural square root of a number
+ *
+ * @n: number whose square root is to be determined
+ * Return: the natural square root of n, or -1 if otherwise
+ */
 int _sqrt_recursion(int n)
 {
 	/* let rt be the square root of n */
