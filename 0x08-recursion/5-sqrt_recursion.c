@@ -22,7 +22,7 @@ int get_sqrt(int val, int rt)
 	if (rt == val / 2)
 		return (-1);
 
-	return (getSqRt(val, rt + 1));
+	return (get_sqrt(val, rt + 1));
 }
 
 
@@ -47,5 +47,5 @@ int _sqrt_recursion(int n)
 
 	/* to get the square root, we need a supporting function getSqRt */
 
-	return (getSqRt(n, rt));
+	return (get_sqrt(n, rt));
 }
