@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - when called, main function will multiplies two numbers
@@ -23,6 +24,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
 
 	p = i * j;
 
