@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	/* if function does not receive 2 numbers */
 
-	for (i = 1; i < argc; num++)
+	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
 		{
