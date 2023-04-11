@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 	while (cents > 0)
 	{
 		/*increment coins */
+		coins++;
 		if ((cents - 25) >= 0)
 		{
 			cents = cents - 25;
@@ -50,7 +51,6 @@ int main(int argc, char *argv[])
 		/* decrement cents */
 		cents--;
 	}
-
 	printf("%d\n", coins);
 	return (0);
 }
