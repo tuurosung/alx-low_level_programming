@@ -13,7 +13,7 @@ int sum_listint(listint_t *head)
 {
 	/* initialize variables */
 
-	int total;
+	int total = 0;
 
 	while (head)
 	{
