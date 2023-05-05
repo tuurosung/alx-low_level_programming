@@ -14,7 +14,7 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	/* initialize variables */
-	unsigned long int xor n ^ m;
+	unsigned long int xor = n ^ m;
 	unsigned long int bits = 0;
 
 	/* loop through as long as condition is met */
