@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	/* pass file functions to variables */
-	o = open(filename, 0_RDONLY);
+	o = open(filename, O_RDONLY);
 	r = read(o, holder, letters);
 	w = write(STDOUT_FILENO, holder, r);
 
