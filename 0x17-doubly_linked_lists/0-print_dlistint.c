@@ -9,14 +9,21 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t n_nodes = 0;
+	int c = 0;
+
+	/* check for NULL */
+	if (h == NULL)
+		return (c);
+
+	while (h->prev != NULL)
+		h=h->prev;
 
 	while (h)
 	{
-		n_nodes++;
+		c++;
 		printf("%d\n", h->n);
 		h = h->next;
 	}
 
-	return (n_nodes);
+	return (c);
 }
