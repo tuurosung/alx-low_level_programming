@@ -5,17 +5,17 @@
  * @hash_tab: address of the hash table
 */
 
-void hash_table_delete(hash_table_t *hash_tab)
+void hash_table_delete(hash_table_t *ht)
 {
-	hash_table_t *head = hash_tab;
+	hash_table_t *head = ht;
 	hash_node_t *node, *holder;
 	unsigned long int i;
 
-	for (i = 0; i < hash_tab->size; i++)
+	for (i = 0; i < ht->size; i++)
 	{
-		if (hash_tab->array[i] != NULL)
+		if (ht->array[i] != NULL)
 		{
-			node = hash_tab->array[i];
+			node = ht->array[i];
 			while (node != NULL)
 			{
 				holder = node->next;
