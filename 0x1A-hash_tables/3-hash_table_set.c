@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *hash_tab, const char *key, const char *value)
     if (new_node->key == NULL)
     {
         free(new_node);
-        return (0)
+        return (0);
     }
 
     new_node->value = copy_value;
