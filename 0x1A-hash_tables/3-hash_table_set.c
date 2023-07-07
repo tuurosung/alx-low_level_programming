@@ -2,33 +2,34 @@
 
 /**
  * hash_table_set - adds / edit an element to the hash table
- * @hash_tab: address of the hash table
+ * @ht: address of the hash table
  * @key: key of the element
  * @value: value of the element
  *
  * Return: 1 if successful, 0 otherwise
 */
-int hash_table_set(hash_table_t *hash_tab, const char *key, const char *value)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node;
 	char *copy_value;
 	unsigned long int index, i;
 
 	/* check for null */
-	if (hash_tab == NULL || key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
 	copy_value = strdup(value);
 	if (copy_value == NULL)
 		return (0);
-	index = key_index((const unsigned char *)key, hash_tab->size);
-	for (i = index; hash_tab->array[i]; i++)
+
+	index = key_index((const unsigned char *)key, ht->size);
+	for (i = index; ht->array[i]; i++)
 	{
-		if (strcmp(hash_tab->array[i]->key, key) == 0)
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			free(hash_tab->array[i]->value);
-			hash_tab->array[i]->value = copy_value;
-			return (i);
+			free(ht->array[i]->value);
+			ht->array[i]->value = copy_value;
+			return (1);
 		}
 	}
 
@@ -47,7 +48,7 @@ int hash_table_set(hash_table_t *hash_tab, const char *key, const char *value)
 	}
 
 	new_node->value = copy_value;
-	new_node->next = hash_tab->array[index];
-	hash_tab->array[index] = new_node;
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
 	return (1);
 }
